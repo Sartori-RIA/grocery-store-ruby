@@ -7,7 +7,7 @@ describe CategoryResolver do
     it { expect(described_class::CATEGORIES.keys).to eq(%i[book food medical]) }
     it { expect(described_class::CATEGORIES[:book]).to eq(%w[book books novel textbook]) }
     it { expect(described_class::CATEGORIES[:medical]).to eq(%w[pill pills headache medicine syrup]) }
-    it { expect(described_class::CATEGORIES[:food]).to eq(["chocolate", "chocolates", "bread", "cake", "apple", "hot dog", "hot-dog", "pizza", "meat", "rice", "beans"]) }
+    it { expect(described_class::CATEGORIES[:food]).to eq(["chocolate", "chocolates", "bread", "cake", "apple", "hot dog", "hot-dog", "pizza", "meat", "rice", "beans", "burger"]) }
   end
 
   describe "#self.resolve" do
