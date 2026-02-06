@@ -11,3 +11,8 @@ Ruby version: 4.0.1
 
 Gems used:
 - Rspec
+
+## Running the project
+
+to Run V1 use: `ruby lib/main_v1.rb`
+to Run V2 use: `ruby lib/main_v2.rb`
