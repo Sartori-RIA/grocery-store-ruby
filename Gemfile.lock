@@ -1,0 +1,17 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+
+PLATFORMS
+  arm64-darwin-25
+  ruby
+
+DEPENDENCIES
+
+CHECKSUMS
+
+RUBY VERSION
+  ruby 4.0.1
+
+BUNDLED WITH
+  4.0.3
