@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative './OrderItem'
+
 class Order
   attr_reader :items
 

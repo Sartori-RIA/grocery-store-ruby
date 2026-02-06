@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require_relative '../helpers/CategoryResolver'
+require_relative '../helpers/TaxCalculator'
+
 class OrderItem
   attr_reader :quantity, :name, :price, :category, :imported
 
