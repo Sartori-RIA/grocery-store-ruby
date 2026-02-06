@@ -11,6 +11,8 @@ Ruby version: 4.0.1
 
 Gems used:
 - Rspec
+- Rubocop
+- SimpleCov
 
 ## Running the project
 
