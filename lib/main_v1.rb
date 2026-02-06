@@ -6,15 +6,15 @@ CATEGORIES = {
   medical: %w[pill pills headache medicine syrup]
 }
 
-def add_items
+def add_items(input: Kernel)
   items = []
 
   loop do
     print "Please Add Item to the order:\n"
-    items << gets.chomp
+    items << input.gets.chomp
 
     print "Add more? (y/n)\n"
-    break if gets.chomp.to_s.downcase != 'y'
+    break if input.gets.chomp.to_s.downcase != 'y'
   end
 
   items
@@ -33,9 +33,9 @@ end
 
 def format_order_items(items)
   items.map do |item|
-    quantity =item.split[0].to_i
+    quantity = item.split[0].to_i
     is_imported = item.include?('imported')
-    name, _ , price = item.partition(" at ")
+    name, _, price = item.partition(" at ")
 
     {
       quantity:,
@@ -74,8 +74,10 @@ def welcome
   print "Welcome to Subscribe Grocery Story :D\n"
 end
 
-welcome
-items = add_items
-formatted_items = format_order_items(items)
-taxes, total = sum_order_values(formatted_items)
-print_order(formatted_items, taxes, total)
+if __FILE__ == $0
+  welcome
+  items = add_items
+  formatted_items = format_order_items(items)
+  taxes, total = sum_order_values(formatted_items)
+  print_order(formatted_items, taxes, total)
+end
