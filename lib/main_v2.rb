@@ -11,4 +11,4 @@ OrderInput.read_items.each do |raw_item|
   order.add_item(raw_item)
 end
 
-OrderPrinter.print(order)
+OrderPrinter.render(order)
