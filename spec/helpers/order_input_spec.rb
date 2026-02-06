@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../../lib/helpers/OrderInput'
+require 'spec_helper'
 
 def mock_gets(*values)
   fake_input = double("input")
@@ -10,7 +10,7 @@ def mock_gets(*values)
   fake_input
 end
 
-describe OrderInput do
+RSpec.describe OrderInput do
   describe "#read_items" do
     it "return the list of items" do
       item_1 = "1 fried potato at 10"

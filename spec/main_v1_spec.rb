@@ -10,7 +10,7 @@ def mock_gets(*values)
   fake_input
 end
 
-describe "MainV1" do
+RSpec.describe "MainV1" do
   describe "#add_items" do
     it "return the list of items" do
       item_1 = "1 fried potato at 10"

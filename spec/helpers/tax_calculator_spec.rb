@@ -1,10 +1,8 @@
 #  frozen_string_literal: true
 
-require_relative '../../lib/helpers/TaxCalculator'
-require_relative '../../lib/helpers/CategoryResolver'
-require_relative '../../lib/models/OrderItem'
+require 'spec_helper'
 
-describe TaxCalculator do
+RSpec.describe TaxCalculator do
   describe "#self.calculate" do
     let(:random_category) { CategoryResolver::CATEGORIES.keys.sample }
     let(:random_item) { CategoryResolver::CATEGORIES[random_category].sample }

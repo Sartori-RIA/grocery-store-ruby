@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative '../../lib/helpers/CategoryResolver'
+require 'spec_helper'
 
-describe CategoryResolver do
+RSpec.describe CategoryResolver do
   describe "#constants" do
     it { expect(described_class::CATEGORIES.keys).to eq(%i[book food medical]) }
     it { expect(described_class::CATEGORIES[:book]).to eq(%w[book books novel textbook]) }

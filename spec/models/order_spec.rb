@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
-require_relative '../../lib/models/Order'
 
-describe Order do
+require 'spec_helper'
+
+RSpec.describe Order do
   describe "#initialize" do
     it "initializes items empty" do
       order = described_class.new

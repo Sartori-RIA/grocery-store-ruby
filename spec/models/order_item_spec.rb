@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative '../../lib/models/OrderItem'
+require 'spec_helper'
 
-describe OrderItem do
+RSpec.describe OrderItem do
   let!(:tax_free_item) { described_class.new("1 book at 10") }
   let!(:basic_tax_item) { described_class.new("1 ps5 at 1000") }
   let!(:import_tax_item) { described_class.new("1 imported ps5 at 1000") }
