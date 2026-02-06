@@ -9,7 +9,7 @@ class OrderInput
       items << input.gets.chomp
 
       print "Add more? (y/n)\n"
-      break if input.gets.chomp.downcase != "y"
+      break if input.gets.chomp.downcase != 'y'
     end
 
     items

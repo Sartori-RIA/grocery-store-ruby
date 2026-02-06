@@ -1,6 +1,8 @@
-require_relative './models/Order'
-require_relative './helpers/OrderInput'
-require_relative './helpers/OrderPrinter'
+# frozen_string_literal: true
+
+require_relative 'models/Order'
+require_relative 'helpers/OrderInput'
+require_relative 'helpers/OrderPrinter'
 
 print "Welcome to Subscribe Grocery Store :D\n"
 

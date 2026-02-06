@@ -3,7 +3,8 @@
 class CategoryResolver
   CATEGORIES = {
     book: %w[book books novel textbook],
-    food: ["chocolate", "chocolates", "bread", "cake", "apple", "hot dog", "hot-dog", "pizza", "meat", "rice", "beans", "burger"],
+    food: ['chocolate', 'chocolates', 'bread', 'cake', 'apple', 'hot dog', 'hot-dog', 'pizza',
+           'meat', 'rice', 'beans', 'burger'],
     medical: %w[pill pills headache medicine syrup]
   }.freeze
 

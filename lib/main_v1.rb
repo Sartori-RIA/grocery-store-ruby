@@ -2,9 +2,10 @@
 
 CATEGORIES = {
   book: %w[book books novel textbook],
-  food: ["chocolate", "chocolates", "bread", "cake", "apple", "hot dog", "hot-dog", "pizza", "meat", "rice", "beans"],
+  food: ['chocolate', 'chocolates', 'bread', 'cake', 'apple', 'hot dog', 'hot-dog', 'pizza',
+         'meat', 'rice', 'beans'],
   medical: %w[pill pills headache medicine syrup]
-}
+}.freeze
 
 def add_items(input: Kernel)
   items = []
@@ -35,15 +36,9 @@ def format_order_items(items)
   items.map do |item|
     quantity = item.split[0].to_i
     is_imported = item.include?('imported')
-    name, _, price = item.partition(" at ")
+    name, _, price = item.partition(' at ')
 
-    {
-      quantity:,
-      name:,
-      is_imported:,
-      price: price.to_f,
-      category: categorize(name),
-    }
+    { quantity:, name:, is_imported:, price: price.to_f, category: categorize(name) }
   end
 end
 
@@ -74,7 +69,7 @@ def welcome
   print "Welcome to Subscribe Grocery Story :D\n"
 end
 
-if __FILE__ == $0
+if __FILE__ == $PROGRAM_NAME
   welcome
   items = add_items
   formatted_items = format_order_items(items)

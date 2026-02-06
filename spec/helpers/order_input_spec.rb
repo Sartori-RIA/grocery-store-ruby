@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 def mock_gets(*values)
-  fake_input = double("input")
+  fake_input = double('input')
   allow(fake_input).to receive(:gets).and_return(
     *values.map { |v| "#{v}\n" }
   )
@@ -11,13 +11,13 @@ def mock_gets(*values)
 end
 
 RSpec.describe OrderInput do
-  describe "#read_items" do
-    it "return the list of items" do
-      item_1 = "1 fried potato at 10"
-      item_2 = "3 burguer at 10"
+  describe '#read_items' do
+    it 'return the list of items' do
+      item_1 = '1 fried potato at 10'
+      item_2 = '3 burguer at 10'
 
-      input = mock_gets(item_1, "y",
-                        item_2, "n")
+      input = mock_gets(item_1, 'y',
+                        item_2, 'n')
 
       items = send(:add_items, input: input)
 
