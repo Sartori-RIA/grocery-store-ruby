@@ -32,6 +32,13 @@ end
 
 require 'support/simplecov'
 
+require_relative "../lib/grocery_store/item"
+require_relative "../lib/grocery_store/tax_calculator"
+require_relative "../lib/grocery_store/order"
+require_relative "../lib/grocery_store/receipt"
+require_relative "../lib/grocery_store/parser"
+
+
 RSpec.configure do |config|
   config.disable_monkey_patching!
 
