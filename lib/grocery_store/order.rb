@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'mutex_m'
+
 module GroceryStore
   class Order
     attr_reader :items
