@@ -1,28 +1,53 @@
-## README
+# Grocery Store - Ruby (No Rails)
 
-here we have two versions of the script
+This project implements a simple grocery store checkout system using
+pure Ruby and Object-Oriented Programming principles.
 
-## V1 main file
+## Requirements
 
-first version just to make it works quickly 
-so you can ignore it, but I decided to keep just it so can understand the flow and steps before moving to OO
+- Ruby 3.3+ (tested on 3.3 and 3.2)
+- Bundler
 
-## V2 main file
+## Installation
 
-Code refactored and moved to OO using correct file for each type of method using models and helpers
+```bash
+bundle install
+```
 
-## Specs
+## Running the Application
 
-The code are tested in isolated files in `specs` folder following the same structure the file are in dev environment
+```bash
+ruby lib/grocery_store.rb
+```
 
-Ruby version: 4.0.1
+## Running Tests
 
-Gems used:
-- Rspec
-- Rubocop
-- SimpleCov
+```bash
+bundle exec rspec
+```
 
-## Running the project
+## Design Principles
 
-to Run V1 use: `ruby lib/main_v1.rb`
-to Run V2 use: `ruby lib/main_v2.rb`
+- Pure Ruby (no Rails)
+- Clear separation of responsibilities
+- Single Responsibility Principle
+- Thread-safe (no shared mutable global state)
+- Minimalistic design (no over-engineering)
+
+## Architecture
+
+- Item – represents a product
+- TaxCalculator – handles tax rules
+- Order – aggregates items
+- Receipt – formats output
+
+## Tax Rules
+
+- 10% basic tax
+- Imported items: additional 5%
+- Taxes rounded up to nearest 0.05
+
+## Why this design?
+
+The goal was to keep the system simple and readable while maintaining
+extensibility. No unnecessary patterns or abstractions were introduced.
