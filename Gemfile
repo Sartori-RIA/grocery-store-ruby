@@ -6,7 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '4.0.1'
 
-
+gem 'mutex_m', '~> 0.3.0'
 
 group :development do
   gem 'rspec', '~> 3.13'
